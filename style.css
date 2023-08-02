@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 450;
+}
+
+body {
+  background-color: rgb(89, 146, 181);
+  color: #fff;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container h1 {
+  font-size: 2.3rem;
+  margin: 2rem;
+}
+
+
+.container button {
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: rgb(15, 89, 134);
+  width: 100px;
+  height: 40px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.container button:hover {
+  background-color: rgb(59, 58, 58);
+}
+.box-container {
+  display: grid;
+  grid-template-columns: repeat(3, 8vw);
+  grid-template-rows: repeat(3,15vh);
+
+}
+
+.user {
+  margin: 2rem;
+  text-align: center;
+}
+.user i {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+.box {
+  border: 1px solid rgb(249, 248, 248);
+  background-color: rgb(15, 89, 134);
+  box-shadow: 5px 5px 5px rgba(33, 33, 33, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
+}
+.box:hover{
+  background-color: rgba(33, 33, 33, 0.6);
+}
+
+.box.disable{
+  background-color: rgba(135, 107, 107, 0.6);
+}
+
+
+.box:first-child,
+.box:nth-child(2),
+.box:nth-child(3) {
+  border-top: none;
+}
+
+.box:first-child,
+.box:nth-child(4),
+.box:nth-child(7) {
+  border-left: none;
+}
+.box:nth-child(7),
+.box:nth-child(8),
+.box:nth-child(9) {
+  border-bottom: none;
+}
+
+.box:nth-child(3),
+.box:nth-child(6),
+.box:nth-child(9) {
+  border-right: none;
+}
+
+
+@media screen and (max-width:760px){
+  
+    .container h1{
+        font-size: 1.5rem;
+    }
+
+    .box-container{
+      grid-template-columns: repeat(3, 12vw);
+      grid-template-rows: repeat(3,10vh);
+    }
+    .box{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width:430px){
+
+  .box-container{
+    grid-template-columns: repeat(3, 20vw);
+    grid-template-rows: repeat(3,12vh);
+    
+  }
+  
+}
